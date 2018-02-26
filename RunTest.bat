@@ -1,4 +1,5 @@
 @echo off
 cd tests
-python test_suite_demo.py %*
+cd home
+py.test -s -v login_tests.py %*
 pause
