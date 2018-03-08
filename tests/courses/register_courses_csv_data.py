@@ -20,7 +20,7 @@ class RegisterCoursesCSVDataTests(unittest.TestCase):
         self.nav.navigateToAllCourses()
 
     @pytest.mark.run(order=1)
-    @data(*getCSVData("/Users/atomar/Documents/workspace_python/letskodeit/testdata.csv"))
+    @data(*getCSVData("testdata.csv"))
     @unpack
     def test_invalidEnrollment(self, courseName, ccNum, ccExp, ccCVV):
         self.courses.enterCourseName(courseName)
